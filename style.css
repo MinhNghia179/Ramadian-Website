@@ -1,0 +1,168 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP&family=Roboto&display=swap");
+* {
+    padding: 0;
+    margin: 0;
+    font-family: "Roboto", sans-serif;
+    box-sizing: border-box;
+    position: relative;
+}
+section {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    padding: 100px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+#header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 40px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+}
+#header .logo {
+    text-decoration: none;
+    font-family: "Noto Sans JP", sans-serif;
+    font-weight: 800;
+    font-size: 2rem;
+    letter-spacing: 2px;
+    color: #6666ff;
+}
+#header .menu {
+    display: flex;
+}
+#header .menu li {
+    list-style-type: none;
+}
+#header .menu li a {
+    text-decoration: none;
+    font-size: 1.3rem;
+    display: inline-block;
+    font-weight: 600;
+    margin-left: 10px;
+    user-select: none;
+    padding: 5px;
+    cursor: pointer;
+    font-family: "Noto Sans JP", sans-serif;
+}
+#header .menu li a:hover {
+    cursor: pointer;
+    background-color: #6666ff;
+    color: white;
+    border-radius: 10px;
+}
+#header .menu li a.active {
+    background-color: #6666ff;
+    color: #fff;
+    border-radius: 10px;
+}
+.content {
+    position: relative;
+}
+.content .textBox {
+    max-width: 600px;
+    position: relative;
+}
+.content .textBox h1 {
+    color: #6666ff;
+    font-size: 3.5em;
+    margin-bottom: 10px;
+    line-height: 1.1em;
+    font-weight: 700;
+}
+.content .textBox p {
+    font-size: 1.2em;
+    color: #190033;
+}
+.content .textBox a {
+    color: #fff;
+    border-radius: 20px;
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: #6666ff;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 1.2em;
+    letter-spacing: 1px;
+    margin-top: 40px;
+}
+.sci {
+    left: 0;
+    position: absolute;
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+.sci li {
+    list-style-type: none;
+}
+.sci li a {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    margin-left: 15px;
+    height: 50px;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    background-color: #0169b2;
+    transition: 0.2s ease-in-out;
+    border-radius: 50%;
+}
+.sci li a {
+    filter: invert(1);
+    transform: scale(0.8);
+}
+.sci li a:hover {
+    background-color: #ff5a8e;
+    transform: translateY(-10px);
+}
+.mosque {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    max-width: 1000px;
+}
+@media (max-width: 990px) {
+    .section {
+        padding: 150px 20px;
+    }
+    .header {
+        padding: 20px;
+    }
+    #header .menu {
+        display: none;
+    }
+    .toggle {
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        border-radius: 10px;
+        width: 60px;
+        height: 60px;
+        background-color: #0169b2;
+        background-image: url("./image/menu.png");
+        background-repeat: no-repeat;
+        background-size: 30px;
+        background-position: center;
+        cursor: pointer;
+        z-index: 1000;
+    }
+    .mosque {
+        max-width: 900px;
+    }
+}
+@media (max-width : 660px) {
+    .mosque {
+        max-width: 600px;
+    }
+}
